@@ -9,24 +9,31 @@ const day = document.getElementById('day');
 const numberDay = document.getElementById('number-day');
 
 //----------------------------The Clock
-let date = new Date();
-//The date
-year.innerHTML = date.getFullYear();
+const reloadClock = () => {
+    let date = new Date();
+    //The date
+    year.innerHTML = date.getFullYear();
 
-let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-month.innerHTML = months[date.getMonth()];
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    month.innerHTML = months[date.getMonth()];
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-day.innerHTML = days[date.getDay()];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    day.innerHTML = days[date.getDay()];
 
-numberDay.innerHTML = date.getDate();
+    numberDay.innerHTML = date.getDate();
 
+    // The time
+    hour.innerHTML = date.getHours();
+    seconds.innerHTML = date.getSeconds();
 
-// The time
-hour.innerHTML = date.getHours();
-minute.innerHTML = date.getMinutes();
-seconds.innerHTML = date.getSeconds();
+    // Double digit minutes
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    } else {
+        minutes = minutes;
+    }
+    minute.innerHTML = minutes;
+};
 
-setInterval(() => {
-    // location.reload()
-}, 1000)
+setInterval(reloadClock, 1000);
