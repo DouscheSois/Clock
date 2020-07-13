@@ -8,7 +8,19 @@
 </head>
 
 <body>
-    <div class="clock">
+
+    <!-- <div id="alternative-clock"></div> -->
+
+    <!-- tThe Navbar-->
+    <div class="navbar">
+        <ul>
+            <li><a onclick="displayOne()">theClock</a></li>
+            <li><a onclick="displayTwo()">Countdown</a></li>
+            <li><a href="#">Regional Clock</a></li>
+        </ul>
+    </div>
+    <!-- theClock, the first tab-->
+    <div class="clock" id="clock">
         <div class="time">
             <h2 id="hour"></h2>
             <h2 id="minute"></h2>
@@ -21,7 +33,25 @@
             <h3 id="year"></h3>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- Countdown, the second tab-->
+    <div class="countdown-clock" id="countdown-clock">
+        <h1>Next Full Moon Countdown!</h1>
+        <div class="countdown-date">
+            <h1>Monday</h1>
+            <h1>August 3 2020</h1>
+        </div>
+        <div class="countdown-time">
+            <h2 id="countdown-hour">5 hours</h2>
+            <h2 id="countdown-minute">35 minutes</h2>
+            <h2 id="countdown-seconds">00 seconds</h2>
+        </div>
+    </div>
+
+
+    <script src="functionality/script.js"></script>
+    <script src="functionality/tab.js"></script>
+    <script src="functionality/clock.js"></script>
+    <script src="functionality/countdown.js"></script>
 </body>
 
 </html>

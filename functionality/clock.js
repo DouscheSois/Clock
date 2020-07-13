@@ -1,17 +1,7 @@
-//The time
-const hour = document.getElementById('hour');
-const minute = document.getElementById('minute');
-const seconds = document.getElementById('seconds');
-//The day
-const year = document.getElementById('year');
-const month = document.getElementById('month');
-const day = document.getElementById('day');
-const numberDay = document.getElementById('number-day');
-
-//----------------------------The Clock
+// The Clock
 const reloadClock = () => {
     let date = new Date();
-    //The date
+    // The date
     year.innerHTML = date.getFullYear();
 
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -23,8 +13,10 @@ const reloadClock = () => {
     numberDay.innerHTML = date.getDate();
 
     // The time
-    hour.innerHTML = date.getHours();
     seconds.innerHTML = date.getSeconds();
+
+    let hours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+    hour.innerHTML = hours[date.getHours()];
 
     // Double digit minutes
     let minutes = date.getMinutes();
@@ -37,3 +29,13 @@ const reloadClock = () => {
 };
 
 setInterval(reloadClock, 1000);
+
+// ---------------------- Simpler Unattractive Alternative
+
+// const alternativeClock = () => {
+//     let alternativeDate = new Date();
+
+//     document.getElementById('alternative-clock').innerHTML = alternativeDate;
+// }
+
+// setInterval(alternativeClock, 1000)

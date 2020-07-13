@@ -1,59 +1,163 @@
 body {
-  background-color: aquamarine;
-  text-align: center;
+    background-color: aquamarine;
+    text-align: center;
 }
 
+/* NavBar CSS */
+.navbar {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: black;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    opacity: 0.5;
+}
+
+.navbar a:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Display CSS */
+.countdown-clock {
+    display: none;
+}
+
+
+/* Clock CSS */
 .clock {
-  background-color: white;
-  position: relative;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  margin: 0;
+    background-color: white;
+    position: relative;
+    top: 4%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+    margin: 0;
 }
 
 .time {
-  background-color: lavenderblush;
-  opacity: 0.7;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  font-size: 3rem;
+    background-color: lavenderblush;
+    opacity: 0.7;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 3rem;
 }
 
 .time #seconds {
-  font-size: 2rem;
-  padding: 10px;
-  width: 8%;
+    font-size: 2rem;
+    padding: 10px;
+    width: 5rem;
 }
 
 .time h2 {
-  width: 15%;
-  height: 15%;
-  background-color: white;
-  margin: 2px;
-  padding: 25px;
+    width: 15%;
+    height: 15%;
+    background-color: white;
+    margin: 2px;
+    padding: 25px;
 }
 
 .date {
-  font-size: 2.5rem;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding: 5%;
+    font-size: 2.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.date #day {
+    background-color: lightblue;
+    padding: 0.5rem;
+}
+
+.date #year,
+.date #month,
+.date #number-day {
+    background-color: lightpink;
+    padding: 0.5rem;
 }
 
 .date h3 {
-  margin: 1%;
+    margin: 0.1rem;
 }
 
-@media (max-width: 700px) {
-  .time {
-    font-size: 1.7rem;
-  }
+/* Countdown Clock CSS */
+.countdown-clock {
+    background-color: lavenderblush;
+    margin-top: 4rem;
+    height: 25rem;
+}
 
-  .date {
-    font-size: 1.2rem;
-  }
+.countdown-clock h1 {
+    background-color: darkgreen;
+    color: white;
+}
+
+.countdown-time {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 5rem;
+    background-color: burlywood;
+}
+
+.countdown-time h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 4.2rem;
+}
+
+.countdown-date {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.countdown-date h1 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    background-color: cyan;
+    color: black;
+}
+
+/* Smaller Screen CSS */
+
+@media (max-width: 700px) {
+    .time {
+        font-size: 1.7rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+    }
+
+    a {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .countdown-time h2 {
+        font-size: 2.5rem;
+    }
+
+
 }
