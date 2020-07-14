@@ -16,7 +16,7 @@
         <ul>
             <li><a onclick="displayOne()">theClock</a></li>
             <li><a onclick="displayTwo()">Countdown</a></li>
-            <li><a href="#">Regional Clock</a></li>
+            <li><a onclick="displayThree()">HOT SPOTS</a></li>
         </ul>
     </div>
     <!-- theClock, the first tab-->
@@ -35,15 +35,52 @@
     </div>
     <!-- Countdown, the second tab-->
     <div class="countdown-clock" id="countdown-clock">
-        <h1>Next Full Moon Countdown!</h1>
+        <h1>Next full Moon countdown!</h1>
         <div class="countdown-date">
             <h1>Monday</h1>
             <h1>August 3 2020</h1>
         </div>
         <div class="countdown-time">
-            <h2 id="countdown-hour">5 hours</h2>
-            <h2 id="countdown-minute">35 minutes</h2>
-            <h2 id="countdown-seconds">00 seconds</h2>
+            <h2 id="countdown-day"></h2>
+            <h2 id="countdown-hour"></h2>
+            <h2 id="countdown-minute"></h2>
+            <h2 id="countdown-seconds"></h2>
+        </div>
+    </div>
+    <!-- Hot Spots, the third tab-->
+    <div class="hotspots-clock" id="hotspots-clock">
+        <div class="cities">
+            <div class="san-francisco">
+                <h2>San Francisco</h2>
+                <div id="sanfrancisco-date"></div>
+                <div id="sanfrancisco-time"></div>
+            </div>
+            <div class="new-york">
+                <h2>New York City</h2>
+                <div id="newyork-date"></div>
+                <div id="newyork-time"></div>
+            </div>
+            <div class="sao-paulo">
+                <h2>Sao Paulo</h2>
+                <div id="saopaulo-date"></div>
+                <div id="saopaulo-time"></div>
+            </div>
+
+            <div class="london">
+                <h2>London</h2>
+                <div id="london-date"></div>
+                <div id="london-time"></div>
+            </div>
+            <div class="new-delhi">
+                <h2>New Delhi</h2>
+                <div id="newdelhi-date"></div>
+                <div id="newdelhi-time"></div>
+            </div>
+            <div class="tokyo">
+                <h2>Tokyo</h2>
+                <div id="tokyo-date"></div>
+                <div id="tokyo-time"></div>
+            </div>
         </div>
     </div>
 
@@ -52,6 +89,7 @@
     <script src="functionality/tab.js"></script>
     <script src="functionality/clock.js"></script>
     <script src="functionality/countdown.js"></script>
+    <script src="functionality/hotspots.js"></script>
 </body>
 
 </html>
