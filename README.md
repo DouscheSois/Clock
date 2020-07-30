@@ -4,7 +4,11 @@ theClock App is an App that displays the current time as well as other features.
 
 Live Link: https://theclockapp.netlify.app/
 
-<img src="images/img01.png" width="400" height="300">
+<img src="images/img1.png" width="400" height="300">
+<hr />
+<img src="images/img2.png" width="400" height="300">
+<hr />
+<img src="images/img3.png" width="400" height="300">
 
 
 <h2>Summary</h2>
