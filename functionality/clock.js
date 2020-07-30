@@ -1,79 +1,56 @@
-// The Clock
-const reloadClock = () => {
-  let date = new Date();
-  // The date
-  year.innerHTML = date.getFullYear();
+(() => {
+  const hour = document.getElementById("hour");
+  const minute = document.getElementById("minute");
+  const seconds = document.getElementById("seconds");
+  const year = document.getElementById("year");
+  const month = document.getElementById("month");
+  const day = document.getElementById("day");
+  const numberDay = document.getElementById("number-day");
 
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  month.innerHTML = months[date.getMonth()];
+  const reloadClock = () => {
+    const date = new Date();
+    year.innerHTML = date.getFullYear();
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  day.innerHTML = days[date.getDay()];
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    month.innerHTML = months[date.getMonth()];
 
-  numberDay.innerHTML = date.getDate();
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
 
-  // The time
-  seconds.innerHTML = date.getSeconds();
+    day.innerHTML = days[date.getDay()];
+    numberDay.innerHTML = date.getDate();
+    seconds.innerHTML = formatTime(date.getSeconds());
+    hour.innerHTML = formatTime(date.getHours());
+    minute.innerHTML = formatTime(date.getMinutes());
+  };
 
-  let hours = [
-    "00",
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20",
-    "21",
-    "22",
-    "23",
-    "24",
-  ];
-  hour.innerHTML = hours[date.getHours()];
+  const formatTime = (time) => {
+    if (time < 10) {
+      return "0" + time;
+    }
+    return time;
+  };
 
-  // Double digit minutes
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  } else {
-    minutes = minutes;
-  }
-  minute.innerHTML = minutes;
-};
-
-setInterval(reloadClock, 1000);
-reloadClock();
+  setInterval(reloadClock, 1000);
+  reloadClock();
+})();

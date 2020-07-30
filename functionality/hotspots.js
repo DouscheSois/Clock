@@ -1,82 +1,82 @@
-// San Francisco time
-const sanFrancisco = () => {
-  let sanFranciscoLocalTime = new Date().toLocaleTimeString("en-US", {
-    timeZone: "America/Tijuana",
-  });
-  let sanFranciscoFullDate = new Date().toLocaleDateString();
-  sanFranciscoTime.innerHTML = sanFranciscoLocalTime;
-  sanFranciscoDate.innerHTML = sanFranciscoFullDate;
-};
+(() => {
+  // The HOT SPOTS time
+  const sanFranciscoTime = document.getElementById("sanfrancisco-time");
+  const newYorkTime = document.getElementById("newyork-time");
+  const saoPauloTime = document.getElementById("saopaulo-time");
+  const londonTime = document.getElementById("london-time");
+  const newDelhiTime = document.getElementById("newdelhi-time");
+  const tokyoTime = document.getElementById("tokyo-time");
 
-// New York time
-const newYork = () => {
-  let newYorkLocalTime = new Date().toLocaleTimeString("en-US", {
-    timeZone: "America/New_York",
-  });
-  let newYorkFullDate = new Date().toLocaleDateString();
+  // The HOT SPOTS date
+  const sanFranciscoDate = document.getElementById("sanfrancisco-date");
+  const newYorkDate = document.getElementById("newyork-date");
+  const saoPauloDate = document.getElementById("saopaulo-date");
+  const londonDate = document.getElementById("london-date");
+  const newDelhiDate = document.getElementById("newdelhi-date");
+  const tokyoDate = document.getElementById("tokyo-date");
 
-  newYorkTime.innerHTML = newYorkLocalTime;
-  newYorkDate.innerHTML = newYorkFullDate;
-};
+  const renderSanFranciscoDateTime = (date) => {
+    sanFranciscoTime.innerHTML = date.toLocaleTimeString("en-US", {
+      timeZone: "America/Tijuana",
+    });
+    sanFranciscoDate.innerHTML = date.toLocaleDateString();
+  };
 
-// Sao Paolo time
-const saoPaulo = () => {
-  let saoPauloLocalTime = new Date().toLocaleTimeString("en-US", {
-    timeZone: "America/Sao_Paulo",
-  });
-  let saoPauloFullDate = new Date().toLocaleDateString();
+  const renderNewYorkDateTime = (date) => {
+    newYorkTime.innerHTML = date.toLocaleTimeString("en-US", {
+      timeZone: "America/New_York",
+    });
+    newYorkDate.innerHTML = date.toLocaleDateString();
+  };
 
-  saoPauloTime.innerHTML = saoPauloLocalTime;
-  saoPauloDate.innerHTML = saoPauloFullDate;
-};
+  const renderSaoPauloDateTime = (date) => {
+    saoPauloTime.innerHTML = date.toLocaleTimeString("en-US", {
+      timeZone: "America/Sao_Paulo",
+    });
+    saoPauloDate.innerHTML = date.toLocaleDateString();
+  };
 
-// London time
-const london = () => {
-  let londonLocalTime = new Date().toLocaleTimeString("en-US", {
-    timeZone: "Europe/London",
-  });
-  let londonFullDate = new Date().toLocaleDateString("en-US", {
-    timeZone: "Europe/London",
-  });
+  const renderLondonDateTime = (date) => {
+    londonTime.innerHTML = date.toLocaleTimeString("en-US", {
+      timeZone: "Europe/London",
+    });
+    londonDate.innerHTML = date.toLocaleDateString("en-US", {
+      timeZone: "Europe/London",
+    });
+  };
 
-  londonTime.innerHTML = londonLocalTime;
-  londonDate.innerHTML = londonFullDate;
-};
+  const renderNewDelhiDateTime = (date) => {
+    newDelhiTime.innerHTML = date.toLocaleTimeString("en-US", {
+      timeZone: "Asia/Kolkata",
+    });
+    newDelhiDate.innerHTML = newDelhiFullDate = date.toLocaleDateString(
+      "en-US",
+      {
+        timeZone: "Asia/Kolkata",
+      }
+    );
+  };
 
-// New Delhi time
-const newDelhi = () => {
-  let newDelhiLocalTime = new Date().toLocaleTimeString("en-US", {
-    timeZone: "Asia/Kolkata",
-  });
-  let newDelhiFullDate = new Date().toLocaleDateString("en-US", {
-    timeZone: "Asia/Kolkata",
-  });
+  const renderTokyoDateTime = (date) => {
+    tokyoTime.innerHTML = date.toLocaleTimeString("en-US", {
+      timeZone: "Asia/Tokyo",
+    });
+    tokyoDate.innerHTML = date.toLocaleDateString("en-US", {
+      timeZone: "Asia/Tokyo",
+    });
+  };
 
-  newDelhiTime.innerHTML = newDelhiLocalTime;
-  newDelhiDate.innerHTML = newDelhiFullDate;
-};
+  const displayHotSpots = () => {
+    const date = new Date();
 
-// Tokyo time
-const tokyo = () => {
-  let tokyoLocalTime = new Date().toLocaleTimeString("en-US", {
-    timeZone: "Asia/Tokyo",
-  });
-  let tokyoFullDate = new Date().toLocaleDateString("en-US", {
-    timeZone: "Asia/Tokyo",
-  });
+    renderSanFranciscoDateTime(date);
+    renderNewYorkDateTime(date);
+    renderSaoPauloDateTime(date);
+    renderLondonDateTime(date);
+    renderNewDelhiDateTime(date);
+    renderTokyoDateTime(date);
+  };
 
-  tokyoTime.innerHTML = tokyoLocalTime;
-  tokyoDate.innerHTML = tokyoFullDate;
-};
-
-const displayHotSpots = () => {
-  sanFrancisco();
-  newYork();
-  saoPaulo();
-  london();
-  newDelhi();
-  tokyo();
-};
-
-setInterval(displayHotSpots, 1000);
-displayHotSpots();
+  setInterval(displayHotSpots, 1000);
+  displayHotSpots();
+})();

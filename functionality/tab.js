@@ -1,21 +1,23 @@
-//Tab Functionality
-const displayOne = () => {
-  clock.style.display = "block";
-  countdownClock.style.display = "none";
-  hotSpotsClock.style.display = "none";
-};
-displayOne();
+(() => {
+  const clock = document.getElementById("clock");
+  const countdownClock = document.getElementById("countdown-clock");
+  const hotSpotsClock = document.getElementById("hotspots-clock");
 
-const displayTwo = () => {
-  clock.style.display = "none";
-  countdownClock.style.display = "block";
-  hotSpotsClock.style.display = "none";
-};
-displayTwo();
+  document.getElementById("clock-tab").addEventListener("click", (e) => {
+    clock.style.display = "block";
+    countdownClock.style.display = "none";
+    hotSpotsClock.style.display = "none";
+  });
 
-const displayThree = () => {
-  clock.style.display = "none";
-  countdownClock.style.display = "none";
-  hotSpotsClock.style.display = "block";
-};
-displayThree();
+  document.getElementById("countdown-tab").addEventListener("click", (e) => {
+    clock.style.display = "none";
+    countdownClock.style.display = "block";
+    hotSpotsClock.style.display = "none";
+  });
+
+  document.getElementById("hotspots-tab").addEventListener("click", (e) => {
+    clock.style.display = "none";
+    countdownClock.style.display = "none";
+    hotSpotsClock.style.display = "block";
+  });
+})();
