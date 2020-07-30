@@ -1,14 +1,14 @@
 # theClock App
 
-theClock App is an App that displays the current time as well as other features. All written in html, css, vanilla JS.
+theClock App is an App that displays the current time as well as other features like a countdown and other timezone clocks. All written in html, css, vanilla JS.
 
 Live Link: https://theclockapp.netlify.app/
 
-<img src="images/img1.png" width="400" height="300">
+<img src="images/img1.png" width="500" height="400">
 <hr />
-<img src="images/img2.png" width="400" height="300">
+<img src="images/img2.png" width="500" height="400">
 <hr />
-<img src="images/img3.png" width="400" height="300">
+<img src="images/img3.png" width="500" height="400">
 
 
 <h2>Summary</h2>
