@@ -8,7 +8,7 @@
   // Countdown
   const countdown = () => {
     const nowDate = new Date();
-    const endDate = new Date("08/03/2020 9:0 PM");
+    const endDate = new Date("09/02/2020 9:0 PM");
     const gap = endDate - nowDate;
 
     const second = 1000;
